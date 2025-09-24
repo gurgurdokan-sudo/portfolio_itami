@@ -46,7 +46,7 @@
 				</div>
 			</div>
 		</div><!-- popupの中身 -->
-		<div class="java">Java
+		<div class="mycode">Java
 			<pre class="short"><code class="language-java">
 public class Main {                                                                                                                        
 	public static void main(String[] args) {
@@ -77,7 +77,7 @@ public class Main {
 				</div>
 			</div>
 		</div><!-- popupの中身 -->
-		<div class="java">Java
+		<div class="mycode">Java
 			<pre class="short"><code class="language-java">
 public class Main {                                                                                                                        
 public static void main(String[] args) { //上部分
@@ -125,7 +125,7 @@ public static void main(String[] args) { //上部分
 				</div>
 			</div>
 		</div><!-- popupの中身 -->
-		<div class="java">Java
+		<div class="mycode">Java
 			<pre class="short"><code class="language-java">
 public class mainCard {                                                                                                                        
 	public static void main(String[] args) {
@@ -150,9 +150,9 @@ public class mainCard {
 }
 </code></pre></div>
 		<li>Java総合</li>
-		<p class="js-marker"> 演習問題を一から実装を通してメソッドの重要性やcollectionの便利さを学び、理解度が高まりました。</p>
-		<a href=exercises.html">■演習問題</a><a href="https://youtu.be/fkcsewo8aMY">■YouTube実行結果</a>
-		<div class="java">Java
+		<p class="js-marker"> 演習問題を一から実装を通してメソッドの重要性やcollectionの便利さを学び、理解度が高まりました。</p><br />
+		<a href="exercises.html">■演習問題</a><a href="https://youtu.be/fkcsewo8aMY">■YouTube実行結果</a>
+		<div class="mycode">Java
 			<pre class="language-java"><code>
 import java.util.ArrayList;
 import java.util.List;
@@ -249,127 +249,129 @@ public String toString() {
 		</div>
 
 		<li>Java自主製作</li>
-		<p class="js-marker">ListでCardを学び簡単なカードゲーム[バカラ]を作りました。<br />
-			1からクラスの設計やメソットの切り分けを考える事で、基本設計の大切さや指示された条件でコーディングする以外の大変さ、新たな気づきがありました。</p>
-		<br />
-		<a href="https://youtu.be/fkcsewo8aMY">■YouTube実行結果</a>
-		<div class="java">Java
+		<p class="js-marker">Listなどコレクションを学び簡単なカードゲーム[バカラ]を作りました。<br />
+			1からクラスの設計やメソットの切り分けを考える事で、基本設計の大切さや指示された条件でコーディングする以外の大変さ、新たな気づきがありました。</p><br />
+		<a href="https://youtu.be/VO3jMQRarqI">■YouTube実行結果</a>
+		<div class="mycode">Java
 			<pre class="language-java"><code>
+package bakara;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 import javax.swing.JFrame;
-public class CardGame {　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-	int number;
-	String mak;
-	static int step = 0;
-	CardGame(int number, String mak) {
-		this.number = number;
-		this.mak = mak;
-	}
-	public static List<CardGame> MakeList(){
-		List<CardGame> CardList=new ArrayList<>();
-		for (int i = 1; i <= 13; i++) {
-			CardList.add(new CardGame(i, "ハート"));
-			CardList.add(new CardGame(i, "クローバー"));
-			CardList.add(new CardGame(i, "ダイヤ"));
-			CardList.add(new CardGame(i, "スペード"));
+
+public class CardGame {
+
+		int number;
+		String mak;
+		static int step = 0;
+		CardGame(int number, String mak) {
+			this.number = number;
+			this.mak = mak;
 		}
-		return CardList;
-	}
-	public static void main(String[] args) {
-		List<CardGame> CardList =MakeList(); //Cardをリスト化
-		for(CardGame a:CardList) {
-			System.out.println(a.mak+""+ a.number);
+		public static List<CardGame> MakeList(){
+			List<CardGame> CardList=new ArrayList<CardGame>();
+			for (int i = 1; i <= 13; i++) {
+				CardList.add(new CardGame(i, "ハート"));
+				CardList.add(new CardGame(i, "クローバー"));
+				CardList.add(new CardGame(i, "ダイヤ"));
+				CardList.add(new CardGame(i, "スペード"));
+			}
+			return CardList;
 		}
-		//random生成
-		Supplier<Integer> random = () -> (int) (Math.random() * CardList.size());
-		while (true) {
-			int num= new java.util.Scanner(System.in).nextInt();
-			if (num == 1) {
-				CardGame Bunker1 = CardList.get(5);
-				CardGame Bunker2 = CardList.get(random.get());
-				int currNum =1;//
-				System.out.println(Bunker1.toString("Bunker " +( currNum++) + "枚目"));
-				System.out.println(Bunker2.toString("Bunker " +( currNum++) + "枚目"));
-				currNum++;
-				int BunSum = Exchage(value(Bunker1)) + Exchage(value(Bunker2));//合計値
-				while (true) {
-					if (BunSum <= 5) {
-						CardGame BunkerNext = CardList.get(random.get());
-						System.out.println(BunkerNext.toString("Bunker " + ( currNum++) + "枚目"));
-						BunSum += Exchage(BunkerNext.number);
-					} else {
-						break;///////////////////５超えたら無限ループを抜ける
+		public static void main(String[] args) {
+			List<CardGame> CardList =MakeList(); //Cardをリスト化
+			for(CardGame a:CardList) {
+//test				System.out.println(a.mak+""+ a.number);
+			}
+			//random生成
+			Supplier<Integer> random = () -> (int) (Math.random() * CardList.size());
+			while (true) {
+				int num= new java.util.Scanner(System.in).nextInt();
+				if (num == 1) {
+					CardGame Bunker1 = CardList.get(5);
+					CardGame Bunker2 = CardList.get(random.get());
+					int currNum =1;//
+					System.out.println(Bunker1.toString("Bunker " +( currNum++) + "枚目"));
+					System.out.println(Bunker2.toString("Bunker " +( currNum++) + "枚目"));
+					currNum++;
+					int BunSum = Exchage(value(Bunker1)) + Exchage(value(Bunker2));//合計値
+					while (true) {
+						if (BunSum <= 5) {
+							CardGame BunkerNext = CardList.get(random.get());
+							System.out.println(BunkerNext.toString("Bunker " + ( currNum++) + "枚目"));
+							BunSum += Exchage(BunkerNext.number);
+						} else {
+							break;///////////////////５超えたら無限ループを抜ける
+						}
 					}
+					CardGame player1 = CardList.get(random.get());
+					CardGame player2 = CardList.get(random.get());
+					currNum = 1;
+					System.out.println(player1.toString("player " + ( currNum++)  + "枚目"));
+					System.out.println(player2.toString("player " + ( currNum++)  + "枚目"));
+					int PalySum = Exchage(value(player1)) + Exchage(value(player2));//合計値
+					while (true) {
+						if (PalySum <= 5) {
+							CardGame playerNext = CardList.get(random.get());
+							System.out.println(playerNext.toString("player " + ( currNum++) + "枚目"));
+							PalySum += Exchage(playerNext.number);
+						} else {
+							System.out.println("Palyerの得点"+PalySum+"点");
+							break;///////////////////５超えたら無限ループを抜ける
+						}
+					}
+						if (BunSum == PalySum) {//9からの差を計算
+							System.out.println("結果：引き分け");
+						} else if (BunSum < PalySum) {
+							System.out.println("結果：バンカー");
+						} else if (BunSum > PalySum) {
+							System.out.println("結果：プレイヤー");
+						} else {
+							System.out.println(BunSum + " " + PalySum);
+						}
+				} else {
+					System.out.print("-------------it over--------------");
+					break;
 				}
-				CardGame player1 = CardList.get(random.get());
-				CardGame player2 = CardList.get(random.get());
-				currNum = 1;
-				System.out.println(player1.toString("player " + ( currNum++)  + "枚目"));
-				System.out.println(player2.toString("player " + ( currNum++)  + "枚目"));
-				int PalySum = Exchage(value(player1)) + Exchage(value(player2));//合計値
-				while (true) {
-					if (PalySum <= 5) {
-						CardGame playerNext = CardList.get(random.get());
-						System.out.println(playerNext.toString("player " + ( currNum++) + "枚目"));
-						PalySum += Exchage(playerNext.number);
-					} else {
-						System.out.println("Palyerの得点"+PalySum+"点");
-						break;///////////////////５超えたら無限ループを抜ける
-					}
-				}
-					if (BunSum == PalySum) {//9からの差を計算
-						System.out.println("結果：引き分け");
-					} else if (BunSum < PalySum) {
-						System.out.println("結果：バンカー");
-					} else if (BunSum > PalySum) {
-						System.out.println("結果：プレイヤー");
-					} else {
-						System.out.println(BunSum + " " + PalySum);
-					}
-			} else {
-				System.out.print("-------------it over--------------");
-				break;
 			}
 		}
-	}
 
-	public static int value(CardGame c) {
-		if (c.number > 9) {//2桁の場合値を置き換える
-			return 0 ;
+		public static int value(CardGame c) {
+			if (c.number > 9) {//2桁の場合値を置き換える
+				return 0 ;
+			}
+			return c.number;
 		}
-		return c.number;
-	}
 
-	public static int Exchage(int num) {
-		if (num - 9 == 0) {
-			return num = 0;/////////基準との差なし
-		} else if (num - 9 > 0) {
-			return num - 9;/////////基準との差
-		} else if (num - 9 < 0) {
-			return -(num - 9);//////マイナスでの基準との差
-		} else {
-			System.out.println("エラー");/////////エラー/////////
-			return 0;
+		public static int Exchage(int num) {
+			if (num - 9 == 0) {
+				return num = 0;/////////基準との差なし
+			} else if (num - 9 > 0) {
+				return num - 9;/////////基準との差
+			} else if (num - 9 < 0) {
+				return -(num - 9);//////マイナスでの基準との差
+			} else {
+				System.out.println("エラー");/////////エラー/////////
+				return 0;
+			}
+		}
+
+		public String toString(String str) {
+			return str + "CardIs [number=" + number + ", mak=" + mak + "]";
 		}
 	}
 
-	public String toString(String str) {
-		return str + "CardIs [number=" + number + ", mak=" + mak + "]";
+	class Frame extends JFrame {
+		public Frame() {
+			super("BAKARA");
+			setDefaultCloseOperation(EXIT_ON_CLOSE);
+			setLayout(new FlowLayout());
+			setSize(300, 400);
+		}
 	}
-}
-
-class Frame extends JFrame {
-	public Frame() {
-		super("BAKARA");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(new FlowLayout());
-		setSize(300, 400);
-	}
-}
-    </code></pre></div>
+  </code></pre></div>
 	</ul>
 	</nav>
 	<footer>
