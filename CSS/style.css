@@ -10,7 +10,7 @@ h1 {
   padding-left: 1rem;
 }
 a {
-  color: #ffffff;
+  color: #9b9b9b;
   padding: 10px;
   text-decoration: none;
   justify-content: center;
@@ -84,10 +84,9 @@ header li:hover {
   background-color: #999999;
   cursor: pointer;
 }/* ヘッダーのメニューエリア */
-.content {/*  */
+.content {/* mainとside */
   z-index: 1;
   display: flex;
-  overflow: scroll;
 }
 /*  サイドメニュー */
 .side-l {
@@ -104,7 +103,8 @@ header li:hover {
 main{
   width: 550px;
   margin: 13px;
-  font-family: "Meiryo", "メイリオ";
+  font-family:  "游ゴシック", sans-serif;
+  background-color: #ffffffc4;
 }
 main img{
   width: 300px;
