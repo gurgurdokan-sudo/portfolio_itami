@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>portfolio</title>
+	<link rel="stylesheet" href="../style.css">
+	<!-- Prism.js のスタイルとスクリプトを読み込む -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+	<script src="../main.js"></script>
+</head>
+
+<body>
+	<div class="background-svg">
+		<svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="none">
+			<defs>
+				<pattern id="syntaxPattern" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+					<text x="0" y="10">ITAMITAMITMI</text>
+				</pattern>
+			</defs>
+			<rect class="stripe-background" x="0" y="0" width="100%" height="100%" fill="url(#syntaxPattern)" />
+		</svg>
+	</div>
+	<header>
+		<h1>伊丹 裕哉[ITAMI YUYA]</h1>
+		<p>このサイトは職業訓練校で学んだ事をポートフォリオにしたWEBサイトです<br />
+			【自己紹介<a href="intro.html">リンク</a>】</p>
+		<nav>
+			<li>Java</li>
+			<li>Python</li>
+			<li>JavaScript</li>
+			<li>Untiy</li>
+		</nav>
+	</header>
+	<ul>
+		<li>Javaアルゴリズム</li>
+		<span class="js-marker"> プログラム言語の基本的な分岐処理とループで現実の様々な事を体系的に再現可能な事を学びました。<br /></span>
+		<div class="pop-box">
+			<input type="checkbox" id="popup-on1">
+			<b>■実行結果</b>
+			<label for="popup-on1" class="btn-open">level1 ピラミッド図形を開く</label>
+			<div class="popup">
+				<label for="popup-on1" class="icon-close">×</label>
+				<div class="popup-content">
+					ピラミッド図形<br>
+					<img src="img/ピラミッド.png" alt="ピラミッド 実行画像" class="layer-img">
+				</div>
+			</div>
+		</div>
+		<div class="java">Java
+			<pre class="short"><code class="language-java">
+public class Main {                                                                                                                        
+	public static void main(String[] args) {
+		for (int i = 0; i <= 5; i++) {
+			for (int j = i; j <= 5; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 0; j <= i; j++) {
+				System.out.print(i-j);
+			}
+			for (int j = 1; j <= i; j++) {
+				System.out.print(j);
+			}System.out.print(" ");
+			System.out.println(" ");
+		}
+	}
+}
+</code></pre>
+		</div>
+		<div class="pop-box">
+			<input type="checkbox" id="popup-on2">
+			<b>■実行結果</b>
+			<label for="popup-on2" class="btn-open">level2 金魚の図形を開く</label>
+			<div class="popup">
+				<label for="popup-on2" class="icon-close">×</label>
+				<div class="popup-content">
+					金魚図形<br>
+					<img src="img/金魚.png" alt="金魚 実行画像" class="layer-img">
+				</div>
+			</div>
+		</div>
+		<div class="java">Java
+			<pre class="short"><code class="language-java">
+public class Main {                                                                                                                        
+public static void main(String[] args) { //上部分
+    for (int i = 0; i <= 5; i++) {
+        for (int j = i; j <= 5; j++) { //スペース="0"
+            System.out.print("0");
+        }
+        for (int j = 0; j <= i; j++) { 
+            System.out.print(" "+j);
+        }System.out.print(" ");
+        for (int j = i*2; j < 10; j++) { //スペース="0"
+            System.out.print("0");
+        }
+        for (int j = 0; j <= i; j++) {
+            System.out.print(" "+j+" ");
+        }System.out.print(" ");
+        System.out.println(" ");
+    }
+    for (int i = 0; i <= 5; i++) { //下部分
+        for (int j = i; j >= 0; j--) { //スペース="0"
+            System.out.print("0");
+        }
+        for (int j = i; j <= 5; j++) {
+            System.out.print(" "+j);
+        }
+        for (int j = i*2; j > 0; j--) { //スペース="0"
+            System.out.print("0");
+        }
+        for (int j = 0; j <= 5-i; j++) {
+            System.out.print(" "+j+" ");
+        }System.out.print(" ");
+        System.out.println(" ");
+        }
+	}
+}</code></pre>
+		</div>
+		<div class="pop-box">
+			<input type="checkbox" id="popup-on3">
+			<b>■実行結果</b>
+			<label for="popup-on3" class="btn-open">level3 円の図形を開く</label>
+			<div class="popup">
+				<label for="popup-on3" class="icon-close">×</label>
+				<div class="popup-content">
+					円の図形<br>
+					<img src="img/円.png" alt="実行画像" class="layer-img">
+				</div>
+			</div>
+		</div>
+		<div class="java">Java
+			<pre class="short"><code class="language-java">
+public class mainCard {                                                                                                                        
+	public static void main(String[] args) {
+		int radius = 20; //半径
+		int X = radius;
+		int Y = radius;
+		for (int i = 0; i <= radius * 2; i++) {// 縦
+			for (int j = 0; j <= radius * 2; j++) {// 横
+				double disSquar = Math.pow(j - X, 2) + Math.pow(i - Y, 2);
+				// (x-cx)²+(y-cy)²=r² を再現 中心からの距離を計算してDouble型に入れる
+				
+				if (disSquar - Math.pow(radius, 2) < radius) {
+					// disSquar(中心)-円の2乗がradiusの二倍(円の直径)よりも小さい
+					System.out.print(" *");
+				} else {
+					System.out.print("  ");
+				}
+			}
+			System.out.println();
+		}
+	}
+}
+</code></pre>
+		</div>
+		<li>Java総合</li>
+		<span class="js-marker"> 演習問題を一から実装を通してメソッドの重要性やcollectionの便利さを学び、理解度が高まりました。</span><br />
+		<a href=exercises.html">■演習問題</a><a href="https://youtu.be/fkcsewo8aMY">■YouTube実行結果</a>
+		<div class="java">Java
+			<pre class="language-java"><code>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+public class Main1 {
+public static void main(String[] args) {
+	List<Box> BallsBoxList = new ArrayList<>();
+	BallsBoxList.add(new Box("赤", "四角形"));
+	BallsBoxList.add(new Box("青", "円形"));
+	boolean bool = true;
+	while (bool) {
+		System.out.println("[menu]1. ボール投入 / 2. ボール取出 / 3. ボール総数表示 / 4. 終了>");
+		int input = new Scanner(System.in).nextInt();
+		switch (input) {
+		case 1:
+			int[] select = inBalls(BallsBoxList, "投入");
+			BallsBoxList.get(select[0]).insertBalls(select[1]);
+			System.out.println(select[1] + "個のボールを入れました。");
+			break;
+		case 2:
+			select = inBalls(BallsBoxList, "取り出し");
+			if (BallsBoxList.get(select[0]).getNum() > select[1]) {
+				BallsBoxList.get(select[0]).setNum(select[1]);
+				Box.totalNumber -= select[1];
+				System.out.println(select[1] + "個のボールを取り出しました。");
+			} else {
+				Box.totalNumber -= BallsBoxList.get(select[0]).getNum();
+				System.out.println(BallsBoxList.get(select[0]).getNum() + "個のボールを取り出しました。");
+				BallsBoxList.get(select[0]).setNum(0);
+			}
+			break;
+		case 3:
+			System.out.println(Box.totalNumber + "個のボールがあります。");
+			break;
+		case 4:
+			System.out.println("---------------it over------------");
+			bool = false;
+			break;
+		default:
+			System.out.println("入力誤り");
+		}
+	}
+}
+
+public static int[] inBalls(List<Box> b, String str) {//Listと投入or取出
+	int[] select = new int[2];
+	Scanner s = new Scanner(System.in);
+	System.out.println("[menu] ");
+	for (int i = 0; i < b.size(); i++) {
+		System.out.println("|" + i + "|" + b.get(i).toString());
+	}
+	System.out.println("ボールを" + str + "する箱の番号を入力して下さい > ");
+	select[0] = s.nextInt();
+	System.out.println("選択された<<" + b.get(select[0]).toString() + ">から");
+	System.out.println(str + "するボールの個数を入力して下さい > ");
+	select[1] = s.nextInt();
+
+	return select;
+}//MainにstaticMethodを定義する事で投入/取り出しの同一動作を省略
+}
+
+class Box {
+	private String color; // 箱の色
+private String shape;// 箱の形
+private int num;// 箱の中のボールの数
+static int totalNumber;
+
+public int getNum() {
+	return num;
+}
+
+public void setNum(int num) {
+	this.num = num;
+}
+
+Box(String color, String shape) {
+	this.color = color;
+	this.shape = shape;
+	this.num = 0;
+}
+
+public void insertBalls(int num) {
+	this.num += num;
+	totalNumber += num;
+}
+
+@Override
+public String toString() {
+	return "color=" + color + ", shape=" + shape + ", 個数=" + num + ">";
+}
+}
+
+    </code></pre>
+		</div>
+
+		<li>Java自主製作</li>
+		<span class="js-marker">ListでCardを学び簡単なカードゲーム[バカラ]を作りました。<br />
+			1からクラスの設計やメソットの切り分けを考える事で、基本設計の大切さや指示された条件でコーディングする以外の大変さ、新たな気づきがありました。</span>
+		<br />
+		<a href="https://youtu.be/fkcsewo8aMY">■YouTube実行結果</a>
+		<div class="java">Java
+			<pre class="language-java"><code>
+import java.awt.FlowLayout;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Supplier;
+import javax.swing.JFrame;
+public class CardGame {　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+	int number;
+	String mak;
+	static int step = 0;
+	CardGame(int number, String mak) {
+		this.number = number;
+		this.mak = mak;
+	}
+	public static List<CardGame> MakeList(){
+		List<CardGame> CardList=new ArrayList<>();
+		for (int i = 1; i <= 13; i++) {
+			CardList.add(new CardGame(i, "ハート"));
+			CardList.add(new CardGame(i, "クローバー"));
+			CardList.add(new CardGame(i, "ダイヤ"));
+			CardList.add(new CardGame(i, "スペード"));
+		}
+		return CardList;
+	}
+	public static void main(String[] args) {
+		List<CardGame> CardList =MakeList(); //Cardをリスト化
+		for(CardGame a:CardList) {
+			System.out.println(a.mak+""+ a.number);
+		}
+		//random生成
+		Supplier<Integer> random = () -> (int) (Math.random() * CardList.size());
+		while (true) {
+			int num= new java.util.Scanner(System.in).nextInt();
+			if (num == 1) {
+				CardGame Bunker1 = CardList.get(5);
+				CardGame Bunker2 = CardList.get(random.get());
+				int currNum =1;//
+				System.out.println(Bunker1.toString("Bunker " +( currNum++) + "枚目"));
+				System.out.println(Bunker2.toString("Bunker " +( currNum++) + "枚目"));
+				currNum++;
+				int BunSum = Exchage(value(Bunker1)) + Exchage(value(Bunker2));//合計値
+				while (true) {
+					if (BunSum <= 5) {
+						CardGame BunkerNext = CardList.get(random.get());
+						System.out.println(BunkerNext.toString("Bunker " + ( currNum++) + "枚目"));
+						BunSum += Exchage(BunkerNext.number);
+					} else {
+						break;///////////////////５超えたら無限ループを抜ける
+					}
+				}
+				CardGame player1 = CardList.get(random.get());
+				CardGame player2 = CardList.get(random.get());
+				currNum = 1;
+				System.out.println(player1.toString("player " + ( currNum++)  + "枚目"));
+				System.out.println(player2.toString("player " + ( currNum++)  + "枚目"));
+				int PalySum = Exchage(value(player1)) + Exchage(value(player2));//合計値
+				while (true) {
+					if (PalySum <= 5) {
+						CardGame playerNext = CardList.get(random.get());
+						System.out.println(playerNext.toString("player " + ( currNum++) + "枚目"));
+						PalySum += Exchage(playerNext.number);
+					} else {
+						System.out.println("Palyerの得点"+PalySum+"点");
+						break;///////////////////５超えたら無限ループを抜ける
+					}
+				}
+					if (BunSum == PalySum) {//9からの差を計算
+						System.out.println("結果：引き分け");
+					} else if (BunSum < PalySum) {
+						System.out.println("結果：バンカー");
+					} else if (BunSum > PalySum) {
+						System.out.println("結果：プレイヤー");
+					} else {
+						System.out.println(BunSum + " " + PalySum);
+					}
+			} else {
+				System.out.print("-------------it over--------------");
+				break;
+			}
+		}
+	}
+
+	public static int value(CardGame c) {
+		if (c.number > 9) {//2桁の場合値を置き換える
+			return 0 ;
+		}
+		return c.number;
+	}
+
+	public static int Exchage(int num) {
+		if (num - 9 == 0) {
+			return num = 0;/////////基準との差なし
+		} else if (num - 9 > 0) {
+			return num - 9;/////////基準との差
+		} else if (num - 9 < 0) {
+			return -(num - 9);//////マイナスでの基準との差
+		} else {
+			System.out.println("エラー");/////////エラー/////////
+			return 0;
+		}
+	}
+
+	public String toString(String str) {
+		return str + "CardIs [number=" + number + ", mak=" + mak + "]";
+	}
+}
+
+class Frame extends JFrame {
+	public Frame() {
+		super("BAKARA");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLayout(new FlowLayout());
+		setSize(300, 400);
+	}
+}
+    </code></pre></div>
+	</ul>
+	</nav>
+	<footer>
+		<p>copyright blog 2025 / All right reserved.</p>
+		<a href="index.html">topに戻る</a>
+	</footer>
+</body>
+
+</html>
