@@ -39,9 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+//href先を変える Alert
 const liElement = document.querySelector('li');
 function Tohref(liElement) {
   const hrefValue = liElement.getAttribute('data-href');
-  // alert("test");
-  window.location.href = hrefValue;
+  if(hrefValue=='this') alert("既に開いているページです！");
+  else window.location.href = hrefValue;
 }

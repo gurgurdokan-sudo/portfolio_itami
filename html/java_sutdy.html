@@ -28,7 +28,10 @@
 		<p>このサイトは職業訓練校で学んだ事をポートフォリオにしたWEBサイトです<br />
 			【自己紹介<a href="index.html">Topページ</a>】</p>
 		<nav>
-			<li>Java</li><li>Python</li><li>JavaScript</li><li>Untiy</li>
+					<li data-href="this" onclick="Tohref(this)">Java</li>
+      		<li data-href="python_sutdy.html" onclick="Tohref(this)">Python</li>
+    	    <li data-href="this" onclick="Tohref(this)">JavaScript</li>
+    	    <li data-href="untiy_sutdy.html" onclick="Tohref(this)">Untiy</li>
 		</nav>
 	</header>
 	<ul>
@@ -260,9 +263,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 import javax.swing.JFrame;
-
 public class CardGame {
-
 		int number;
 		String mak;
 		static int step = 0;

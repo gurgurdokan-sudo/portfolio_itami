@@ -1,87 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <script src="../JS/main.js"></script>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>portfolio</title>
-	<link rel="stylesheet" href="../CSS/style.css">
-	<script src="../JS/main.js"></script>
-</head>
-
-<body>
-	<div class="background-svg">
-		<svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="none">
-			<defs>
-				<pattern id="syntaxPattern" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
-					<text x="0" y="10">ITAMITAMITAMI</text>
-				</pattern>
-			</defs>
-			<rect class="stripe-background" x="0" y="0" width="100%" height="100%" fill="url(#syntaxPattern)" />
-		</svg>
-	</div>
-	<header>
-		<h1>伊丹 裕哉[ITAMI YUYA]</h1>
-		<p>このサイトは職業訓練校で学んだ事をポートフォリオにしたWEBサイトです</p>
-		<nav>
-			<li data-href="java_sutdy.html" onclick="Tohref(this)">Java</li>
-			<li data-href="python_sutdy.html" onclick="Tohref(this)">Python</li>
-			<li data-href="this" onclick="Tohref(this)">JavaScript</li>
-			<li data-href="untiy_sutdy.html" onclick="Tohref(this)">Untiy</li>
-		</nav>
-	</header>
-	<div class="content">
-		<div class="side-l">
-			<h4 class="ms-1">---skills---</h4>
-			<img src="../img/java_log.png" alt="Java">
-			<img src="../img/Python.png" alt="Python">
-			<img src="../img/tomcat_log.png" alt="tomcat"><br />
-			<img src="../img/html5_log.png" alt="HTML5">
-			<img src="../img/css3_log.png" alt="css3">
-			<img src="../img/JavaScript_log.png" alt="JavaScript"><br />
-			<img src="../img/untiy_log.png" alt="untiy">
-			<img src="../img/c_log.png" alt="c++">
-			<img src="../img/c_sharp_log.png" alt="C#">
-			<h4 class="ms-1">---qualification---</h4>
-			<img src="../img/JSTQB_Log.png" alt="JSTQB">
-			<img src="../img/java_bronze.png" alt="java_bronze">
-			<img src="../img/ip_log.png" alt="ITパスポート">
-			<h4 class="ms-1">---InternShip---</h4>
-			<p>▼スマートフォンゲームの第三者検証</p>
-			<p class="ms-1">2023年 3月 ~ 2023年 7月</p>
-			<p>▼銀行受付タブレット端末テスト検証</p>
-			<p class="ms-1">2023年 8月 ~ 2023年 3月</p>
-			<p>▼BtoB向け検証(携帯キャリア)</p>
-			<p class="ms-1">2023年 4月 ~ 2023年10月</p>
-			<p>▼カメラの連携モバイルアプリの検証</p>
-			<p class="ms-1">2023年11月 ~ 2024年 3月</p>
-			<p>▼車載端末のシステムテスト検証</p>
-			<p class="ms-1">2024年 5月 ~ 2024年 7月</p>
-		</div><!-- サイドメニュー -->
-		<main>
-			<img src="../img/itami.png" alt="itami">
-			<div class="main_text">
-				<p>■自己PR</p>
-				これまで約3年間、QAエンジニアとして品質保証や管理業務に携わってきました。
-				金融系のWEBサイトやBtoB向けのECサイト、自動車の搭載端末など、
-				いろんな製品に第三者検証を担当し関わってきました。<br /><br />
-				テスト設計から実施、ログ解析、影響度の分析、
-				報告フォーマットの整備まで、幅広く対応してきた経験があります。<br /><br />
-				アジャイル開発の現場では、機能追加による影響範囲を考慮したテストケースの設計や、
-				仕様の抜け漏れを防ぐためのQA視点でのフィードバックなど、開発チームとの連携を意識して動いていました。<br />
-				また、ExcelやVBAを使って業務効率化ツールを作ったり、
-				仕様書の更新・整備を進めたりと、自分から改善提案をすることも大切にしてきました。
-				ただ、検証業務の中で不具合を起票する際に、根本的な原因や仕組みを深く理解できていないことにもどかしさを感じることがありました。<br /><br />
-				もともとコーディングには興味があったので、もっと技術的な理解を深めたいと思い、職業訓練校に通うことを決意。今ではJava
-				Bronzeを取得するまでになりました。まだまだ学びの途中ですが、実際のプロジェクトに参加して実務経験を積みながら、自分の市場価値を高めていきたいと思っています。これまでの品質保証の経験と、これから伸ばしていく技術力を掛け合わせて、
-				貢献できるエンジニアを目指しています。
-			</div>
-		</main>
-	</div>
-	<footer>
-		<p>&copy; 2025 yuya All rights reserved. </p>
-		<a href="index.html">topに戻る</a>
-	</footer>
-</body>
-
+  <body>
+    <div class="background-svg">
+      <svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="none">
+        <defs>
+          <pattern id="syntaxPattern" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+            <text x="0" y="10">ITAMITAMITAMI</text>
+          </pattern>
+        </defs>
+        <rect class="stripe-background" x="0" y="0"width="100%"height="100%"fill="url(#syntaxPattern)" />       
+      </svg>
+    </div>
+    <header>
+      <h1>伊丹 裕哉[ITAMI YUYA]</h1>
+      <p>このサイトは職業訓練校で学んだ事をポートフォリオにしたWEBサイトです</p>
+      <nav>
+        <li data-href="java_sutdy.html" onclick="Tohref(this)">Java</li>
+        <li data-href="python_sutdy.html" onclick="Tohref(this)">Python</li>
+        <li data-href="this" onclick="Tohref(this)">JavaScript</li>
+        <li data-href="untiy_sutdy.html" onclick="Tohref(this)">Untiy</li>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="side-l">
+        <h4 class="ms-1">---skills---</h4>
+        <img src="../img/java_log.png" alt="Java" />
+        <img src="../img/Python.png" alt="Python" />
+        <img src="../img/tomcat_log.png" alt="tomcat" /><br />
+        <img src="../img/html5_log.png" alt="HTML5" />
+        <img src="../img/css3_log.png" alt="css3" />
+        <img src="../img/JavaScript_log.png" alt="JavaScript" /><br />
+        <img src="../img/untiy_log.png" alt="untiy" />
+        <img src="../img/c_log.png" alt="c++" />
+        <img src="../img/c_sharp_log.png" alt="C#" />
+        <h4 class="ms-1">---qualification---</h4>
+        <img src="../img/JSTQB_Log.png" alt="JSTQB" />
+        <img src="../img/java_bronze.png" alt="java_bronze" />
+        <img src="../img/ip_log.png" alt="ITパスポート" />
+        <h4 class="ms-1">---InternShip---</h4>
+        <p>▼スマートフォンゲームの第三者検証</p>
+        <p class="ms-1">2023年 3月 ~ 2023年 7月</p>
+        <p>▼銀行受付タブレット端末テスト検証</p>
+        <p class="ms-1">2023年 8月 ~ 2023年 3月</p>
+        <p>▼BtoB向け検証(携帯キャリア)</p>
+        <p class="ms-1">2023年 4月 ~ 2023年10月</p>
+        <p>▼カメラの連携モバイルアプリの検証</p>
+        <p class="ms-1">2023年11月 ~ 2024年 3月</p>
+        <p>▼車載端末のシステムテスト検証</p>
+        <p class="ms-1">2024年 5月 ~ 2024年 7月</p>
+      </div>
+      <!-- サイドメニュー -->
+      <main>
+        <img src="../img/itami.png" alt="itami" />
+        <div class="main_text">
+          <p>■自己PR</p>
+          これまで約3年間、QAエンジニアとして品質保証や管理業務に携わってきました。
+          金融系のWEBサイトやBtoB向けのECサイト、自動車の搭載端末など、
+          いろんな製品に第三者検証を担当し関わってきました。<br /><br />
+          テスト設計から実施、ログ解析、影響度の分析、
+          報告フォーマットの整備まで、幅広く対応してきた経験があります。<br /><br />
+          アジャイル開発の現場では、機能追加による影響範囲を考慮したテストケースの設計や、
+          仕様の抜け漏れを防ぐためのQA視点でのフィードバックなど、開発チームとの連携を意識して動いていました。<br />
+          また、ExcelやVBAを使って業務効率化ツールを作ったり、
+          仕様書の更新・整備を進めたりと、自分から改善提案をすることも大切にしてきました。
+          ただ、検証業務の中で不具合を起票する際に、根本的な原因や仕組みを深く理解できていないことにもどかしさを感じることがありました。<br /><br />
+          もともとコーディングには興味があったので、もっと技術的な理解を深めたいと思い、職業訓練校に通うことを決意。今ではJava
+          Bronzeを取得するまでになりました。まだまだ学びの途中ですが、実際のプロジェクトに参加して実務経験を積みながら、自分の市場価値を高めていきたいと思っています。これまでの品質保証の経験と、これから伸ばしていく技術力を掛け合わせて、
+          貢献できるエンジニアを目指しています。
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2025 yuya All rights reserved.</p>
+      <a href="index.html">topに戻る</a>
+    </footer>
+  </body>
 </html>

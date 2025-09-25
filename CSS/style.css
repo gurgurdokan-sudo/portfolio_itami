@@ -18,7 +18,7 @@ a {
 span {
   white-space-collapse: 10px;
 }
-.ms-1{
+.ms-1 {
   margin-left: 1rem;
 }
 /* javaコードエリア */
@@ -42,7 +42,7 @@ pre {
 }
 code {
   padding-top: 0%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 ul {
   list-style-type: circle;
@@ -83,8 +83,9 @@ header li {
 header li:hover {
   background-color: #999999;
   cursor: pointer;
-}/* ヘッダーのメニューエリア */
-.content {/* mainとside */
+} /* ヘッダーのメニューエリア */
+.content {
+  /* mainとside */
   z-index: 1;
   display: flex;
 }
@@ -94,7 +95,7 @@ header li:hover {
   width: 250px;
   background-color: #cccccc3f;
 }
-.side img{
+.side img {
   padding-top: 20%;
   width: 240px;
 }
@@ -103,26 +104,25 @@ header li:hover {
   width: 250px;
   background-color: #cccccc3f;
 }
-.side-l p{
+.side-l p {
   font-size: 12px;
 }
 .side-l img {
   width: 60px;
 }
-main{
+main {
   width: 550px;
   margin: 13px;
-  font-family:  "游ゴシック", sans-serif;
+  font-family: "游ゴシック", sans-serif;
   background-color: #ffffffc4;
 }
-main img{
+main img {
   width: 300px;
   height: auto;
   border-radius: 40px;
   float: right;
   margin: 3px;
 }
-
 /* フッターエリア */
 footer {
   background-color: #000000;
@@ -133,7 +133,7 @@ footer {
 footer p {
   padding: auto;
   margin: auto;
-}/* ↑javaコードエリア */
+} /* ↑javaコードエリア */
 /* 背景エリア */
 .background-svg {
   position: fixed;
@@ -150,21 +150,24 @@ footer p {
   /* ここで全体を傾ける */
 }
 .background-svg text {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 30px;
   fill: #cccccc;
   dominant-baseline: hanging;
   /* テキストのベースライン */
-}/* 背景エリア */
+} /* 背景エリア */
 
 /* ポップアップウインドウの設定 */
 .popup {
   background-color: #cccccc;
-  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 0 9999px #000000;
   display: none;
   /* 初期非表示 */
   position: fixed;
-  top: 0;left: 0;right: 0;bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
   width: 50vw;
   height: 35vw;
@@ -176,31 +179,35 @@ footer p {
   display: none;
 }
 /* チェックされたらポップアップウインドウを開く */
-#popup-on1:checked~.popup {
+#popup-on1:checked ~ .popup {
   display: block;
 }
 #popup-on2 {
   display: none;
 }
 /* チェックされたらポップアップウインドウを開く */
-#popup-on2:checked~.popup {
+#popup-on2:checked ~ .popup {
   display: block;
 }
 #popup-on3 {
   display: none;
 }
 /* チェックされたらポップアップウインドウを開く */
-#popup-on3:checked~.popup {
+#popup-on3:checked ~ .popup {
   display: block;
 }
 /* 閉じるアイコン（右上） */
 .icon-close {
   background: #3a1516;
   color: #cccccc;
+  cursor:pointer;
   font-size: 30px;
   padding: 0 10px;
   position: absolute;
   right: 0;
+}
+.icon-close:hover {
+  background: #000000;
 }
 /* 開くボタン */
 .btn-open {
