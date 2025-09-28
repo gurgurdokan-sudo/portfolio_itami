@@ -4,9 +4,7 @@ body {
   font-size: 110%;
   margin-left: 2%;
   margin: auto;
-}
-.body{
-    width: 150vb;
+  width: 180vb;
 }
 h1 {
   padding-left: 1rem;
@@ -62,7 +60,7 @@ ul li::before {
   width: 5px;
   background-color: #3a1516;
   position: absolute;
-  left: 0;
+  left: 8%;
   border-radius: 10px;
   margin-left: 2%;
 }
@@ -119,7 +117,7 @@ main {
   background-color: #ffffffc4;
 }
 main img {
-  width: 300px;
+  width: 45%;
   height: auto;
   border-radius: 40px;
   float: right;
