@@ -71,7 +71,7 @@ ul li::before {
 /* ヘッダーのメニューエリア */
 header nav {
   display: flex;
-  background-color: #111111;
+  background-color: #111111c6;
   color: #ffffff;
   list-style-type: none;
   height: 30px;
@@ -83,6 +83,7 @@ header li {
   text-align: center;
   width: 10rem;
   background-color: #111111;
+  border-radius: 1rem;
 }
 header li:hover {
   background-color: #999999;
