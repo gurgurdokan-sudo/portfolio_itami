@@ -18,6 +18,10 @@ a {
 span {
   white-space-collapse: 10px;
 }
+.center{
+  display: flex;
+  justify-content: center;
+}
 .ms-1 {
   margin-left: 1rem;
 }

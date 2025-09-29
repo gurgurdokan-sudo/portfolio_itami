@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="JS/main.js"></script>
+  </head>
+
+  <body>
+    <div class="background-svg">
+      <svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="none">
+			<defs>
+				<pattern id="syntaxPattern" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+					<text x="0" y="10">ITAMITAMITAMI</text>
+				</pattern>
+			</defs>
+			<rect class="stripe-background" x="0" y="0" width="100%" height="100%" fill="url(#syntaxPattern)" />
+		</svg>
+    </div>
+    <header>
+      <h1>伊丹 裕哉[ITAMI YUYA]</h1>
+      <p>
+        このサイトは職業訓練校で学んだ事をポートフォリオにしたWEBサイトです<br />
+        【自己紹介<a href="index.html">Topページ</a>】
+      </p>
+      <nav>
+        <li data-href="java_sutdy.html" onclick="Tohref(this)">Java</li>
+        <li data-href="python_sutdy.html" onclick="Tohref(this)">Python</li>
+        <li data-href="this" onclick="Tohref(this)">Javaサーブレット</li>
+        <li data-href="untiy_sutdy.html" onclick="Tohref(this)">Untiy</li>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="side-l">
+        <p>他にも作成したサーブレット</p>
+        <h4 class="ms-1">--topics--</h4>
+        <div class="ms-1">
+          <p>・顧客リストの作成</p>
+          <p>・ギャルゲーの様なゲーム</p>
+					<p>・クイズゲーム</p>
+        </div>
+      </div>
+      <main>
+        ■サーブレットを使ってマインスイーパーを作る<br />
+        　サーブレットの勉強ではサーバとHtml/cssデータベースSQL/VAOパターンなどの色々な知識の
+        集合として様々な業務的な顧客リストを作成するWEBアプリケーションの作成にチャレンジしました。
+        　自分で作成したマインスイーパーは、悩んだ点が多く2次元配列と他の2次元配列に対してboolean型の
+        フィールドを工夫して表示・非表示を切り替えるロジックで、配列の外側indexより小さい所を、
+        参照しない様にテンキーを意識してロジックを考えたりBombは同じインスタンスを参照したりの
+        工夫をしました。
+        特に工夫したのは、一番最初に押した時にマップが生成される様にした事です。押す前にマップが生成されてしまうと
+        運ゲーになってしまうので、あとからの仕様変更に苦労しました。
+        ・今後の課題
+        　マス目のインスタンスを一つずつ作ってしまうので、WEBアプリケーションとしてはあまり良くないと
+        完成してみて思いました。<br />
+				
+				<dev>■実行結果</dev><a href="https://github.com/gurgurdokan-sudo/mineSwweeper.git">■gitHubリンク</a>
+				
+				<iframe width="560" height="315"
+				src="https://www.youtube.com/embed/e6zQ7OwvFiI?si=98zD-8q1Vk76cLDe" 
+				title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+				referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 yuya All rights reserved.</p>
+      <a href="index.html">topに戻る</a>
+    </footer>
+  </body>
+</html>
