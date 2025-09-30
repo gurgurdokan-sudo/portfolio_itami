@@ -38,7 +38,7 @@
 		<div class="while">
 			　このコードでは、ユーザーが入力した食材をもとに「オレンジページ」からレシピを検索し、
 			一覧表示します。このコードでは、WEBスプレイピングで取得したデータを表示するのみですが、
-			requestsを使用する事により取得してきたデータ(html)を綺麗に成形し
+			BeautifulSoupを使用する事により取得してきたデータ(html)を綺麗に成形し
 			必要なデータを別の所で使いやすくする<span class="js-marker">の外部ライブラリの活用を理解しました。</span>
 		</div>
 		<input type="checkbox" id="popup-on1">
@@ -47,12 +47,11 @@
 		<div class="popup">
 			<label for="popup-on1" class="icon-close">×</label>
 			<div class="popup-content">
-				ピラミッド図形<br>
-				<img src="img/ピラミッド.png" alt="ピラミッド 実行画像" class="layer-img">
+				実行画像<br>
+				<img src="img/" alt="実行画像" class="layer-img">
 			</div>
 		</div>
-		<div class="mycode">Python
-			<pre class="short"><code class="language-python">
+		<div class="mycode">Python<pre class="short"><code class="language-python">
 import requests
 from bs4 import BeautifulSoup
 search_meal= input('食材を入力＞＞')
@@ -69,9 +68,22 @@ for t in tit_string:
 			</code>
 		</pre>
 		</div>
-		<li>機械学習従来Model</li>
-		<div class="mycode">Python
-			<pre><code class="language-python">
+		<li>従来型の機械学習モデル</li>
+		<div class="while">
+			　データをCSVで取り込んだ後に欠損データの様々な補完方法や、サーキットラーンで学習した
+			Modelを表示させる事で<span class="js-marker">根本的なif文の集合体として動いていることを実感し、アルゴリズムの構造理解が深まりました。</span>
+		</div>
+		<input type="checkbox" id="popup-on1">
+		<b>■実行結果</b>
+		<label for="popup-on2" class="btn-open">作成したModelを表示した結果を開く</label>
+		<div class="popup">
+			<label for="popup-on2" class="icon-close">×</label>
+			<div class="popup-content">
+				実行画像<br>
+				<img src="img/" alt="実行画像" class="layer-img">
+			</div>
+		</div>
+		<div class="mycode">Python<pre><code class="language-python">
 from sklearn import tree
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
@@ -103,9 +115,42 @@ plt.show()
 			</code>
 		</pre>
 		</div>
-		<li>自作ゲームとPythonライブラリを使用したコードの改善</li>
+		<div class="while">
+			　同じデータを用いて、SVM（サポートベクターマシン）による分類も試しました。<br />
+			技術者として内部構造を理解していないと使えないから、完全に理解しなくてもSVMでより高度な分類を
+			丸投げしても使えるという新体験でした。<br />
+			「モデルに丸投げしても動く」ことは、<span class="js-marker">実務における機械学習の強みの一つだと感じました。</span><br />
+		</div>
 		<div class="mycode">Python
 			<pre class="short"><code class="language-python">
+model = LinearSVC() # 線形SVMモデルを定義
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+				</code></pre>
+		</div></div>
+		<li>戦争カードゲームとPythonの強力ライブラリ</li>
+		<b>■問題</b><br />
+		<div class="gray ms-1">
+		・デッキとして1-13の番号が書かれたカードをあなたとCPUが13枚ずつそれぞれ持つ<br />
+		・それぞれのデッキをシャッフルし裏向きに置く<br />
+		・お互いに一番上のカードをオープン、数字の大きいほう(1が最小13が最大)がそのラウンドを勝利し、
+		  &#8221;２枚のカード&#8221;を獲得できる。<br />
+		・もし同じ数字がでた場合は、勝敗が決まるまで次のカードを出し合って、勝ったほうが引き分けのラウンドを含めた枚数分のカードを獲得できる。<br />
+		・お互いの手札がなくなったらゲーム終了で、獲得したカードの枚数が多いほうが最終的な勝者となる。<br />
+		</div>
+		<div class="while">
+			　演習課題のカードゲームを作成しました。リスト内包表記や簡単なCUIゲームでも感じる
+			<span class="js-marker">Pythonのシンプルさで複雑な分岐も整理して書ける</span>ため、アルゴリズムの理解を深めるのに最適な題材でした。
+		</div>
+		<input type="checkbox" id="popup-on1">
+		<b>■実行結果</b>
+		<label for="popup-on1" class="btn-open">実行結果を開く</label>
+		<div class="popup">
+			<label for="popup-on1" class="icon-close">×</label>
+			<div class="popup-content">実行画像<br><img src="img/" alt="実行画像" class="layer-img">
+			</div>
+		</div>
+		<div class="mycode">Python<pre><code class="language-python">
 import random
 user_card_list = [i for i in range(1,14)]
 cpu_card_list = [i for i in range(1,14)]
@@ -157,13 +202,32 @@ elif card < 13:
     str_result = f'lose||CPUのCard枚数：{26-card}||'
 else:
     str_result = f'draw||CPUのCard枚数：{26-card}||'
-
 print(str_result)
-
-			</code>
-		</pre>
-		</div>
-
+			</code></pre></div>
+	<div class="while">
+		　さらに、ライブラリを使用してより短く簡潔にする事にもチャレンジしました。<br />
+		保守や今後の運用を考えた時には、長くてもわかりやすいコードを書くように心掛けてきましたが、
+		<span class="js-marker">あえてコードを短くする事でよりPythonのメリット</span>を感じました。
+	</div>
+<div class="mycode">Python<pre class="short"><code class="language-python"></code>
+import random
+user, pc = [random.sample(range(1, 14), 13) for _ in range(2)]
+you_win = pc_win = stock = 0
+for i, (u, p) in enumerate(zip(user, pc), 1):
+    stock += 2
+    if u == p:
+        result = '引き分け、キャリーオーバー!'
+    elif u > p:
+        you_win += stock
+        result = f'あなたの勝ち!{stock}枚ゲット!'
+        stock = 0
+    else:
+        pc_win += stock
+        result = f'PCの勝ち({stock})'
+        stock = 0
+    print(f'{i}回戦 あなた:{u}, PC:{p}, {result}')
+print(f'獲得枚数 {you_win}対{pc_win}で{"あなた" if you_win > pc_win else "PC"}の勝ち!')
+</code></pre></div>
 	</ul>
 
 	<footer>
