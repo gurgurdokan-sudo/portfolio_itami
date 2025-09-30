@@ -10,6 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+
 <body>
 	<div class="background-svg">
 		<svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="none">
@@ -24,7 +25,7 @@
 	<header>
 		<h1>伊丹 裕哉[ITAMI YUYA]</h1>
 		<p>このサイトは職業訓練校で学んだ事をポートフォリオにしたWEBサイトです<br />
-      【自己紹介<a href="index.html">Topページ</a>】</p>
+			【自己紹介<a href="index.html">Topページ</a>】</p>
 		<nav>
 			<li data-href="java_sutdy.html" onclick="Tohref(this)">Java</li>
 			<li data-href="this" onclick="Tohref(this)">Python</li>
@@ -33,7 +34,23 @@
 		</nav>
 	</header>
 	<ul>
-	<li>Webスプレーピングもどき</li>
+		<li>Webスクレイピング</li>
+		<div class="while">
+			　このコードでは、ユーザーが入力した食材をもとに「オレンジページ」からレシピを検索し、
+			一覧表示します。このコードでは、WEBスプレイピングで取得したデータを表示するのみですが、
+			requestsを使用する事により取得してきたデータ(html)を綺麗に成形し
+			必要なデータを別の所で使いやすくする<span class="js-marker">の外部ライブラリの活用を理解しました。</span>
+		</div>
+		<input type="checkbox" id="popup-on1">
+		<b>■実行結果</b>
+		<label for="popup-on1" class="btn-open">食材:ニンジンを入力した結果を開く</label>
+		<div class="popup">
+			<label for="popup-on1" class="icon-close">×</label>
+			<div class="popup-content">
+				ピラミッド図形<br>
+				<img src="img/ピラミッド.png" alt="ピラミッド 実行画像" class="layer-img">
+			</div>
+		</div>
 		<div class="mycode">Python
 			<pre class="short"><code class="language-python">
 import requests
@@ -50,10 +67,11 @@ for t in tit_string:
     if search_meal in t:
         print(t)
 			</code>
-		</pre></div>
+		</pre>
+		</div>
 		<li>機械学習従来Model</li>
 		<div class="mycode">Python
-			<pre class="short"><code class="language-python">
+			<pre><code class="language-python">
 from sklearn import tree
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
@@ -83,7 +101,8 @@ plt.figure(figsize=(12, 8))
 plot_tree(model, feature_names=xcol, class_names=model.classes_, filled=True)
 plt.show()
 			</code>
-		</pre></div>
+		</pre>
+		</div>
 		<li>自作ゲームとPythonライブラリを使用したコードの改善</li>
 		<div class="mycode">Python
 			<pre class="short"><code class="language-python">
@@ -142,12 +161,13 @@ else:
 print(str_result)
 
 			</code>
-		</pre></div>
-	
+		</pre>
+		</div>
+
 	</ul>
-		
-		<footer>
-			<p>&copy; 2025 yuya All rights reserved. </p>
+
+	<footer>
+		<p>&copy; 2025 yuya All rights reserved. </p>
 		<a href="index.html">topに戻る</a>
 	</footer>
 </body>
