@@ -79,10 +79,10 @@ ul li::before {
   margin-left: 2%;
 }
 /* ヘッダーのメニューエリア */
-.background-img{
+header{
   background-image: url("../img/pc.jpg");
   background-size: 100%,auto;
-  color: #ffffff;
+  color: #e0dfdf;
   margin-bottom: 1rem;
 }
 header nav {
